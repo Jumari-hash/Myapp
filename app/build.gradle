@@ -4,8 +4,8 @@ plugins {
 }
 
 android {
+    namespace 'com.shortsbox.com'
     compileSdk 33
-    namespace 'com.shortsbox.com'  // Make sure this matches your package structure
 
     defaultConfig {
         applicationId "com.shortsbox.player"
@@ -24,6 +24,15 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
